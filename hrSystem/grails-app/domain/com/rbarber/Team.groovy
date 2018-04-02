@@ -7,6 +7,10 @@ Integer numberOfEmployees
 String sectionName
 String description
 
+static hasMany = [shift:Shift, task:Task, employee:Employee]
+
+
+
     static constraints = {
 
 teamName blank: false, nullable:false

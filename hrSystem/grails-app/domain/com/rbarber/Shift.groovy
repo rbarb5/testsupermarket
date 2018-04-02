@@ -7,6 +7,14 @@ String dayOfWeek
 Integer numberOfHours
 String startingTime
 
+static hasMany=[task:Task,team:Team]
+static belongsTo = [Team,Task,Employee]
+
+String toString()
+{
+	return "$dayOfWeek : $timeOfDay"
+}
+
     static constraints = {
 
 timeOfDay blank: false, nullable:false

@@ -9,6 +9,13 @@ String managerEmail
 String office
 String department
 
+static hasMany=[teamleader:TeamLeader,employee:Employee]
+
+String toString()
+{
+	return"$department - $fullName"
+}
+
 
     static constraints = {
 

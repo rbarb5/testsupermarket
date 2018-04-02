@@ -10,6 +10,14 @@ String timeRequired
 String description
 Boolean taskCompleted
 
+static hasMany = [employee:Employee, shift:Shift, team:Team]
+static belongsTo = [Employee, Team, Shift]
+
+String toString()
+{
+	return "$department - $taskName"
+}
+
     static constraints = {
 
 taskName blank: false, nullable:false
